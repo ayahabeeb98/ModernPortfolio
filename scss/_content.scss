@@ -19,6 +19,7 @@
       height: 100%;
       text-align: center;
       padding:2rem 0;
+      overflow: auto;
     }
   }
 
@@ -104,8 +105,6 @@
     grid-template-areas: 'bioImage' 'bio' 'job1' 'job2' 'job3';
 
     grid-template-columns: 1fr;
-      align-items: center;
-      justify-content: center;
 
   }
 }

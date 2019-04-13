@@ -199,9 +199,10 @@ main {
 
     div {
         font-size: 2rem;
-        border: 3px solid #fff;
         padding: 1.5rem 2.5rem;
         margin-bottom: 3rem;
+        background:rgba( darken($primary-color,10) , $background-opacity);
+        border-radius: 5px;
         @include easeOut;
 
         &:hover {
