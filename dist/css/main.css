@@ -314,7 +314,10 @@ footer#main-footer {
     grid-template-columns: 1fr; }
   .about-info {
     grid-template-areas: 'bioImage' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+    .about-info .about-info {
+      align-items: center;
+      justify-content: center; } }
 
 @media screen and (min-width: 320px) and (max-width: 501px) {
   .about-info {
