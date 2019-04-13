@@ -35,7 +35,11 @@ $background-opacity: 0.7;
 
 
 // Media Query Mixin
-
+@mixin  mediaXS{
+  @media screen and (min-width: 320px) and (max-width: 501px){
+    @content;
+  }
+}
 @mixin mediaSm {
   //500 px or less
   @media screen and (max-width: 500px) {

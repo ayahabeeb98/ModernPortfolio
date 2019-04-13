@@ -4,17 +4,17 @@
 
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-body{
-  @include background;
-  background: $primary-color;
-  color:#fff;
-  height: 100%;
-  margin: 0;
-  line-height: 1.5;
-  font-family: 'Acme', sans-serif;
+body {
+    @include background;
+    background: $primary-color;
+    color: #fff;
+    height: 100%;
+    margin: 0;
+    line-height: 1.5;
+    font-family: 'Acme', sans-serif;
 
 }
 
@@ -24,195 +24,198 @@ body{
 h1,
 h2,
 h3,
-h5{
-  margin: 0;
-  font-weight: 400;
+h5 {
+    margin: 0;
+    font-weight: 400;
 
-  &.lg-heading{
-    font-size: 5rem;
-  }
+    &.lg-heading {
+        font-size: 5rem;
+    }
 
-  &.sm-heading{
-    padding: 0.2rem 1rem;
-    margin-bottom: 2rem;
-    //primaryColor then how many it's lighten
-    //background: lighten($primary-color,2);
-    background: rgba(lighten($primary-color,2),0.5);
-  }
-
-}
-
-.box{
-  background: lighten($primary-color,10);
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-
-  h5{
-    text-indent: 0.8rem;
-  }
+    &.sm-heading {
+        padding: 0.2rem 1rem;
+        margin-bottom: 2rem;
+        //primaryColor then how many it's lighten
+        //background: lighten($primary-color,2);
+        background: rgba(lighten($primary-color, 2), 0.5);
+    }
 
 }
 
-a{
-  color: #fff;
-  text-decoration: none;
+.box {
+    background: lighten($primary-color, 10);
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+
+    h5 {
+        text-indent: 0.8rem;
+    }
+
 }
 
-header{
-  position: fixed;
-  z-index: 2;
-  width: 100%;
+a {
+    color: #fff;
+    text-decoration: none;
 }
 
-.text-secondary{
-  color: $secondery-color;
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.text-secondary {
+    color: $secondery-color;
 }
 
 //main
 
-main{
-  padding: 4rem;
-  //height: 100%;
-  min-height: calc(100vh - 60px);
-  .icons{
-    margin-top: 1rem;
+main {
+    padding: 4rem;
+    //height: 100%;
+    min-height: calc(100vh - 60px);
 
-    a {
-      padding: 0.4rem;
+    .icons {
+        margin-top: 1rem;
 
-      &:hover{
-        color: $secondery-color;
-        @include easeOut();
-      }
+        a {
+            padding: 0.4rem;
+
+            &:hover {
+                color: $secondery-color;
+                @include easeOut();
+            }
+        }
     }
-  }
 
-  &#home {
-    overflow: hidden;
-    h1{
-      margin-top: 20vh;
+    &#home {
+        overflow: hidden;
+
+        h1 {
+            margin-top: 20vh;
+        }
     }
-  }
 }
 
 .about-info {
-  display: grid;
-  grid-template-areas:
-  'bioImage bio bio'
-  'job1 job2 job3';
+    display: grid;
+    grid-template-areas:
+        'bioImage bio bio'
+        'job1 job2 job3';
 
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
 
 
-  .bio-img {
-    grid-area: bioImage;
-    margin: auto;
-    border-radius: 50%;
-    border: $secondery-color 3px solid;
-  }
-
-  .bio {
-    grid-area: bio;
-    font-size: 1.5rem;
-  }
-
-  .job-1{
-    grid-area: job1;
-  }
-  .job-2{
-    grid-area: job2;
-  }
-
-  .job-3{
-    grid-area: job3;
-  }
-
-  .job{
-    background: lighten($primary-color,5);
-    border-bottom: $secondery-color 5px solid;
-
-    p{
-      padding: 1rem ;
-      margin-bottom: 2rem;
+    .bio-img {
+        grid-area: bioImage;
+        margin: auto;
+        border-radius: 50%;
+        border: $secondery-color 3px solid;
     }
-  }
+
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+
+    .job-1 {
+        grid-area: job1;
+    }
+
+    .job-2 {
+        grid-area: job2;
+    }
+
+    .job-3 {
+        grid-area: job3;
+    }
+
+    .job {
+        background: lighten($primary-color, 5);
+        border-bottom: $secondery-color 5px solid;
+
+        p {
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+    }
 }
 
 
 //Projects section
 
 .projects {
-  display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(3,1fr);
+    display: grid;
+    grid-gap: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
 
 
-  img{
-    width: 100%;
-    border: #fff 3px solid;
+    img {
+        width: 100%;
+        border: #fff 3px solid;
 
-    &:hover{
-      opacity: 0.7;
-      border-color:$secondery-color;
-      @include  easeOut;
+        &:hover {
+            opacity: 0.7;
+            border-color: $secondery-color;
+            @include easeOut;
+        }
     }
-  }
 }
 
 //btn style
 
-.btn{
-  display: block;
-  padding: 0.5rem 1rem;
-  border: 0;
-  margin-bottom: 0.3rem;
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
 
-  &:hover {
-    background: $secondery-color;
-    color: $primary-color;
-  }
+    &:hover {
+        background: $secondery-color;
+        color: $primary-color;
+    }
 }
 
-.btn-light{
-  @extend .btn;
-  background: darken($primary-color,50);
-  color: #fff;
+.btn-light {
+    @extend .btn;
+    background: darken($primary-color, 50);
+    color: #fff;
 }
 
-.btn-dark{
-  @extend .btn;
-  background: lighten($primary-color,25);
-  color: #fff;
+.btn-dark {
+    @extend .btn;
+    background: lighten($primary-color, 25);
+    color: #fff;
 }
 
 // Contact section
 .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
 
-  div{
-    font-size: 2rem;
-    border: 3px solid #fff;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    @include easeOut;
+    div {
+        font-size: 2rem;
+        border: 3px solid #fff;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut;
 
-    &:hover {
-      background: lighten($primary-color,20);
+        &:hover {
+            background: lighten($primary-color, 20);
+        }
     }
-  }
 }
 
-footer#main-footer{
-  text-align: center;
-  padding: 1rem;
-  background: darken($primary-color,10);
-  color: #fff;
-  height: 60px;
+footer#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    color: #fff;
+    height: 60px;
 }
 
 
