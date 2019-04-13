@@ -1,0 +1,117 @@
+// Wide Screens
+@include mediaXL {
+  .projects {
+    grid-template-columns: repeat(4,1fr);
+  }
+}
+
+// Disktop Screens
+@include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .boxes{
+    flex-wrap: wrap;
+
+    div{
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding:2rem 0;
+    }
+  }
+
+}
+
+// Tablets & small laptops Screens
+@include mediaMd {
+    main{
+      align-items: center;
+      text-align: center;
+
+      .lg-heading{
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
+    }
+
+  ul.menu-nav,
+  div.menu-branding{
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show{
+      transform: translate3d(0,0,0);
+    }
+  }
+
+  .menu-nav{
+    height: 65vh;
+    transform: translate3d(-100%,0,0);
+    font-size: 24px;
+  }
+
+  .menu-branding{
+    height: 35vh;
+    transform: translate3d(100%,0,0);
+
+    .portrait {
+      background: url("../img/portrait_small.jpg");
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .boxes{
+    flex-wrap: wrap;
+
+    div{
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding:2rem 0;
+    }
+  }
+
+  #about,
+  #work
+  {
+    margin: 0 1rem;
+  }
+
+  .about-info {
+    grid-template-areas:
+  'bioImage'
+  'bio'
+  'job1'
+  'job2'
+  'job3';
+
+    grid-template-columns: 1fr;
+
+    margin: 0 1rem;
+
+  }
+
+  .projects {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+
+// Smart forms Screens
+@include mediaSm {
+
+  main#home h1{
+    margin-top: 10vh;
+
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+}
+
