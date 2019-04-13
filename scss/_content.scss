@@ -12,7 +12,6 @@
   }
 
   .boxes{
-    flex-wrap: wrap;
 
     div{
       width: 100%;
@@ -107,6 +106,13 @@
     grid-template-columns: 1fr;
 
   }
+
+  .boxes {
+    div {
+      font-size: 1rem;
+    }
+  }
+
 }
 @include mediaXS{
   .about-info {
